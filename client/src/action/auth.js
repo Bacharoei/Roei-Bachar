@@ -102,26 +102,6 @@ export const login = ({ email, password }) => async dispatch => {
 }
 
 
-// /* Get All users */
-// export const  getUsers = () => async dispatch => { 
-//     if(localStorage.token) {
-//         setAuthToken(localStorage.token);
-//     }
-
-//     try{
-//         const res = await axios.get('/api/users');
-
-//         dispatch({
-//             type: GET_USERS,
-//             payload: res.data
-//         });
-//     } catch (err) { 
-//         dispatch({
-//             type: AUTH_ERROR
-//         })
-//     }
-// }
-
 export const getUsers = () => async dispatch => {
     if(localStorage.token) {
         setAuthToken(localStorage.token);
@@ -129,7 +109,6 @@ export const getUsers = () => async dispatch => {
 
     try {
         const res = await axios.get('/api/users');
-
         dispatch({
             type: GET_USERS,
             payload: res.data
