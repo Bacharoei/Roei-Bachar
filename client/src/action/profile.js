@@ -7,7 +7,6 @@ import {
     GET_PROFILES,
     CLEAR_PROFILE,
     ACCOUNT_DELETED,
-    // GET_REPOS
 } from './types';
 
 /* Get User Profile */
